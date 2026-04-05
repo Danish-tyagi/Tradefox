@@ -2,7 +2,7 @@
 
 > India's stock market simulator — practice trading with ₹1,00,000 virtual balance using real NSE/BSE prices. Zero risk, real experience.
 
-![TradeFox Landing](https://i.imgur.com/placeholder.png)
+<img width="1364" height="641" alt="image" src="https://github.com/user-attachments/assets/cdcb87bc-442f-40ea-a821-09961408446e" />
 
 ---
 
