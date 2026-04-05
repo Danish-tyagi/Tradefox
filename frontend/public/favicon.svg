@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+  <!-- Fox head shape -->
+  <polygon points="24,2 44,14 44,34 24,46 4,34 4,14" fill="#FF6B00"/>
+  <!-- Fox face white patch -->
+  <ellipse cx="24" cy="28" rx="10" ry="12" fill="#FFF3E0"/>
+  <!-- Left ear -->
+  <polygon points="4,14 12,4 16,18" fill="#FF6B00"/>
+  <!-- Right ear -->
+  <polygon points="44,14 36,4 32,18" fill="#FF6B00"/>
+  <!-- Left eye -->
+  <circle cx="18" cy="22" r="2.5" fill="#1E293B"/>
+  <!-- Right eye -->
+  <circle cx="30" cy="22" r="2.5" fill="#1E293B"/>
+  <!-- Nose -->
+  <ellipse cx="24" cy="30" rx="2" ry="1.5" fill="#FF6B00"/>
+  <!-- Chart line accent -->
+  <polyline points="10,38 16,32 22,35 28,26 34,29 40,22" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

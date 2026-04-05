@@ -1,0 +1,16 @@
+<svg width="220" height="60" viewBox="0 0 220 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fox Icon -->
+  <g transform="translate(10,10)">
+    <path d="M20 0 L40 20 L30 40 L10 40 L0 20 Z" fill="#FF6B00"></path>
+    <path d="M20 10 L30 20 L20 30 L10 20 Z" fill="#ffffff"></path>
+    <circle cx="23" cy="18" r="2" fill="#000"></circle>
+  </g>
+
+  <!-- Text -->
+  <text x="70" y="38" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#1E293B">
+    Trade<tspan fill="#FF6B00">Fox</tspan>
+  </text>
+
+  <!-- Chart Line -->
+  <polyline points="70,45 90,35 110,40 130,25 150,30 170,20" fill="none" stroke="#22C55E" stroke-width="2"></polyline>
+</svg>
