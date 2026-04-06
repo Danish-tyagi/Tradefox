@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../hooks/useAuth';
 
-const TOUR_KEY = 'tf_tour_done';
+const tourKey = (userId) => `tf_tour_done_${userId || 'guest'}`;
 
 const steps = [
   {
@@ -47,17 +48,18 @@ const WelcomeTour = () => {
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState(0);
   const navigate = useNavigate();
+  const { user } = useAuth();
 
   useEffect(() => {
-    if (!localStorage.getItem(TOUR_KEY)) {
-      // Small delay so dashboard loads first
+    if (!user) return;
+    if (!localStorage.getItem(tourKey(user.id))) {
       const t = setTimeout(() => setOpen(true), 800);
       return () => clearTimeout(t);
     }
-  }, []);
+  }, [user]);
 
   const dismiss = () => {
-    localStorage.setItem(TOUR_KEY, '1');
+    localStorage.setItem(tourKey(user?.id), '1');
     setOpen(false);
   };
 
