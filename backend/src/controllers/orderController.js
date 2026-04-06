@@ -48,12 +48,14 @@ const placeOrder = async (req, res, next) => {
 
     // SL/SLM orders wait for trigger — don't match immediately
     if (type === 'SL' || type === 'SLM') {
-      return res.status(201).json({ order });
+      const user = await prisma.user.findUnique({ where: { id: userId }, select: { balance: true } });
+      return res.status(201).json({ order, balance: user.balance });
     }
 
     try {
       const filled = await matchOrder(order);
-      return res.status(201).json({ order: filled });
+      const updatedUser = await prisma.user.findUnique({ where: { id: userId }, select: { balance: true } });
+      return res.status(201).json({ order: filled, balance: updatedUser.balance });
     } catch (matchErr) {
       const cancelled = await prisma.order.findUnique({
         where: { id: order.id },

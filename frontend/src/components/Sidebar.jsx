@@ -130,7 +130,7 @@ const Sidebar = () => {
 
           {/* Help / Tour */}
           <button
-            onClick={() => { localStorage.removeItem('tf_tour_done'); window.location.href = '/dashboard'; }}
+            onClick={() => { localStorage.removeItem(`tf_tour_done_${user?.id}`); window.location.href = '/dashboard'; }}
             className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-ink-600 hover:bg-ink-100 hover:text-ink-900 transition-all mt-1">
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
               <circle cx="12" cy="12" r="10"/><path strokeLinecap="round" d="M12 16v-4m0-4h.01"/>

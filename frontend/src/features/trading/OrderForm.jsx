@@ -141,6 +141,11 @@ const OrderForm = ({ stock, embedded = false }) => {
     if (stock?.currentPrice) setPrice(stock.currentPrice);
   }, [stock?.id]);
 
+  // Reset price when switching order type
+  useEffect(() => {
+    if (stock?.currentPrice) setPrice(stock.currentPrice);
+  }, [type]);
+
   const toast = useToast();
   const place = useMutation({
     mutationFn: (d) => orderService.place(d),
