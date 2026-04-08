@@ -24,6 +24,7 @@ const limiter = rateLimit({
   message: 'Too many requests from this IP'
 });
 
+app.set('trust proxy', 1);
 app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
 app.use(express.json());
 app.use(limiter);

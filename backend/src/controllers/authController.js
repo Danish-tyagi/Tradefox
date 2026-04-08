@@ -164,8 +164,10 @@ async function forgotPassword(req, res, next) {
     });
 
     await sendPasswordResetEmail(email, token);
+    console.log('Password reset email sent to:', email);
     res.json({ message: 'If that email exists, a reset link has been sent.' });
   } catch (err) {
+    console.error('forgotPassword error:', err.message);
     next(err);
   }
 }
