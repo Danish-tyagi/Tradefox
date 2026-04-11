@@ -140,7 +140,7 @@ Start the frontend:
 npm run dev
 ```
 
-App will be running at `http://localhost:5173`
+App will be running at `https://tradefox-1.onrender.com/`
 
 ---
 
