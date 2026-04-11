@@ -94,26 +94,6 @@ cd Tradefox
 cd backend
 npm install
 ```
-
-Create a `.env` file in `/backend`:
-
-```env
-DATABASE_URL="postgresql://user:password@localhost:5432/tradefox"
-JWT_SECRET="your_jwt_secret"
-JWT_REFRESH_SECRET="your_refresh_secret"
-EMAIL_USER="your_email@gmail.com"
-EMAIL_PASS="your_app_password"
-PORT=5000
-CLIENT_URL="http://localhost:5173"
-```
-
-Run migrations and seed the database:
-
-```bash
-npm run db:migrate
-npm run db:seed
-```
-
 Start the backend:
 
 ```bash
@@ -159,18 +139,10 @@ App will be running at `https://tradefox-1.onrender.com/`
 | GET/POST/DELETE | `/api/watchlist` | Manage watchlist |
 | GET/POST/DELETE | `/api/alerts` | Manage price alerts |
 
----
+## 🚀 Live Demo
 
-## 🗄️ Database Schema
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Now-green?style=for-the-badge&logo=render)](https://tradefox-1.onrender.com/)
 
-- **User** — Auth, balance, profile
-- **Stock** — Symbol, price, sector, change %
-- **Order** — Market/Limit/SL orders with status tracking
-- **Portfolio** — Holdings with avg buy price
-- **Watchlist** — User's saved stocks
-- **PriceAlert** — Target price notifications
-
----
 
 ## 📄 License
 
